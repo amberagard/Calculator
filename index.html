@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript">
+		var buttonClicked = function(operator) {
+			var numberOne = parseInt(document.getElementById('number_1').value);
+			var numberTwo = parseInt(document.getElementById('number_2').value);
+			var answer = document.getElementById('answer');
+
+			if (operator === "+") {
+				answer.value = numberOne + numberTwo	
+
+			} else if (operator === "-") {
+				answer.value = numberOne - numberTwo
+
+			} else if (operator === "x") {
+				answer.value = numberOne * numberTwo
+
+			} else if (operator === "/") {
+				answer.value = numberOne / numberTwo
+			}
+		}
+
+	</script>
+
+<title>Calculator</title>
+
+<meta name="description" content="Description goes here."/>
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css" media="screen"/>
+
+<link rel="stylesheet" href="css/main.css"/>
+
+
+</head>
+
+<body>
+
+	<h1>Calculator v2</h1>
+
+	<div class="calculator">
+
+		<fieldset class="number">
+			<div class="number">
+				<label for="number_1">Number 1:</label>
+				<input type="text" id="number_1">
+			</div>
+			<div class="number">
+				<label for="number_2">Number 2:</label>
+				<input type="text" id="number_2">
+				<button onclick="buttonClicked('+')">+</button>
+				<button onclick="buttonClicked('-')">-</button>
+				<button onclick="buttonClicked('x')">x</button>
+				<button onclick="buttonClicked('/')">/</button>
+			</div>
+		</fieldset>
+
+		<fieldset class="answer">
+			<label for="answer">Answer:</label>
+			<input type="text" id="answer">
+		</fieldset>
+
+	</div>
+
+</body>
+</html>
